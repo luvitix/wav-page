@@ -1,12 +1,9 @@
 {
-  "name": "your-project",
-  "version": "1.0.0",
-  "description": "Your Express App",
-  "main": "server.js",
   "scripts": {
-    "start": "node server.js -p 8888"
+    "start": "netlify dev",
+    "build": "netlify functions:build"
   },
-  "dependencies": {
-    "express": "^4.17.1"
+  "netlify": {
+    "functions": "functions"
   }
 }
