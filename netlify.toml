@@ -1,5 +1,3 @@
 [build]
-  command = "npm start"
+  command = "npm run build"
   publish = "views"
-  functions = "functions"
-  NETLIFY_EXECUTABLE = "node_modules/.bin/netlify"
