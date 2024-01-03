@@ -17,6 +17,24 @@
     </div>
 </body>
     <script>
+        // 페이지 로드 시 자동으로 호출되도록 설정
+        window.onload = function () {
+            load();
+        };
+
+        function load() {
+            // 현재 URL 가져오기
+            var currentUrl = window.location.href;
+
+            // URL에서 끝 부분을 가져오기 (예: https://wav-view.netlify.app/e5ve5vf4uh2sd6wj0qh2sf4uj0qj0q 에서 e5ve5vf4uh2sd6wj0qh2sf4uj0qj0q 가져오기)
+            var id1 = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
+
+            // 이미지 태그 업데이트
+            var img = document.getElementById('viewpoint');
+            img.src = "fan-objekt/zf_" + id1 + ".png";
+        }
+    </script>
+    <script>
         function flip() {
             // 클릭된 이미지의 src 속성을 얻음
 
