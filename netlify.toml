@@ -4,5 +4,5 @@
 
 [[redirects]]
   from = "/*"
-  to = "/views/server.html"
+  to = "/server.html"
   status = 200

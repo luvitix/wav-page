@@ -8,7 +8,7 @@ app.use(express.static(path.join('public')));
 
 app.get('/:id1*', (req, res) => {
     const id1 = req.params.id1;
-    const dynamicHtmlPath = path.join('views', 'server.html');
+    const dynamicHtmlPath = path.join('public', 'server.html');
 
     fs.readFile(dynamicHtmlPath, 'utf8', (err, data) => {
         if (err) {
