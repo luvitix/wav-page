@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAV</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div>
+        <h1><img src="wav.png" alt=""></h1>
+        <img id="viewpoint" src="fan-objekt/zf_{{objektId}}.png" alt="901Z" width="25%" onclick=flip()>
+        <div>
+            <h3 class="white">Description</h3>
+            <p class="white" ></p>
+        </div>
+    </div>
+</body>
+    <script>
+        function flip() {
+            // 클릭된 이미지의 src 속성을 얻음
+
+            var clickedImage = document.getElementById("viewpoint");
+            var originalImage = clickedImage.src;
+
+            finder = originalImage.split("objekt/")[1]
+
+            if (finder[1] == "f") {
+
+                clickedImage.src = `fan-objekt/zb_${finder.substring(3)}`
+
+            } else if (finder[1] == "b") {
+
+                clickedImage.src = `fan-objekt/zf_${finder.substring(3)}`
+
+            } else {
+                console.log("오류")
+            }
+        }
+    </script>
+</html>

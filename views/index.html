@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WAV</title>
+    <link rel="stylesheet" href="mainstyles.css">
+</head>
+<body>
+    <img src="wav.png" alt="">
+
+    <div class="search-container">
+        <form id="searchForm" onsubmit="return searchObject();">
+            <h3 class="white">보고 싶은 오브젝트의 id를 입력하세요</h3>
+            <input type="text" id="search-input" placeholder="id 입력">
+            <button type="submit" class="search-button">🔎</button>
+        </form>
+    </div>
+
+    <div class="update">
+        <h1 class="white">What is NeXT? </h1>
+        <img id="viewpoint" src="nxtsoon.png" alt="901Z" width="25%">
+        
+    </div>
+</body>
+    <script>
+        function searchObject() {
+            // 검색창의 값을 가져옴
+            var objectId = document.getElementById("search-input").value;
+            console.log(objectId)
+
+            // 입력된 값으로 이동
+            document.getElementById("searchForm").action = "/" + objectId;
+
+        }
+    </script>
+    
+</html>
