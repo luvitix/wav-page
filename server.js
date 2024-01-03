@@ -2,7 +2,7 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const app = express();
-const port = 3000;
+//const port = 3000;
 
 app.use(express.static(path.join('public')));
 
@@ -38,6 +38,6 @@ app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
-app.listen(port, () => {
-    console.log(`Server is running at http://localhost:${port}`);
-});
+// app.listen(port, () => {
+//     console.log(`Server is running at http://localhost:${port}`);
+// });
