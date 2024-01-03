@@ -1,5 +1,5 @@
 [build]
-  command = "node server.js"
+  command = "npm run build"
   publish = "views"  # 만약 정적 파일이 다른 디렉토리에 있다면 해당 디렉토리로 변경
 
 [dev]
