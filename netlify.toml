@@ -2,3 +2,4 @@
   command = "npm start"
   publish = "views"
   functions = "netlify/functions"
+  timeout = 900

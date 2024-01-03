@@ -4,7 +4,7 @@
   "description": "Your Express App",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js"
+    "start": "node server.js -p 8888"
   },
   "dependencies": {
     "express": "^4.17.1"
