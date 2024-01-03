@@ -1,6 +1,6 @@
 [build]
   command = "node server.js"
-  publish = "public"  # 만약 정적 파일이 다른 디렉토리에 있다면 해당 디렉토리로 변경
+  publish = "views"  # 만약 정적 파일이 다른 디렉토리에 있다면 해당 디렉토리로 변경
 
 [dev]
   command = "node server.js"
