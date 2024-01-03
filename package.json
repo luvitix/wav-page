@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "start": "netlify functions:build",
+    "start": "npm run dev",
+    "dev": "netlify dev",
     "build": "netlify functions:build"
   },
   "netlify": {
