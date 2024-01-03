@@ -6,7 +6,7 @@ const app = express();
 app.use(express.static(path.join('public')));
 
 
-app.get('/:id1*', (req, res) => {
+app.get('/:id1', (req, res) => {
     const id1 = req.params.id1;
     const dynamicHtmlPath = path.join('public', 'server.html');
 
