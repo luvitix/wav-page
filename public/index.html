@@ -30,8 +30,8 @@
             console.log(objectId)
 
             // 입력된 값으로 이동
-            document.getElementById("searchForm").action = "/" + objectId;
-
+            window.location.href = "/" + objectId;
+            event.preventDefault();
         }
     </script>
     
