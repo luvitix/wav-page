@@ -1,9 +1,3 @@
 [build]
   command = "npm start"
   publish = "public"
-
-[[redirects]]
-  from = "/:id1/*"
-  to = "/.netlify/functions/app/:id1"
-  status = 200
-  force = true
