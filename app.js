@@ -10,15 +10,16 @@ app.get('/:id1', (req, res) => {
     const id1 = req.params.id1;
     const dynamicHtmlPath = path.join('public', 'server.html');
 
-    fs.readFile(dynamicHtmlPath, 'utf8', (err, data) => {
-        if (err) {
-            console.error(err);
-            res.status(500).send('Internal Server Error');
-        } else {
-            const dynamicHtml = data.replace(/{{objektId}}/g, id1);
-            res.send(dynamicHtml);
-        }
-    });
+    try {
+        // 파일을 동기적으로 읽어옴
+        let data = fs.readFileSync(dynamicHtmlPath, 'utf8');
+        // id1을 직접 삽입
+        const dynamicHtml = data.replace(/{{objektId}}/g, id1);
+        res.send(dynamicHtml);
+    } catch (err) {
+        console.error(err);
+        res.status(500).send('Internal Server Error');
+    }
 });
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'));
