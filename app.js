@@ -9,7 +9,7 @@ app.use(express.static(path.join('public')));
 
 app.get('/:id1', (req, res) => {
     const id1 = req.params.id1;
-    const dynamicHtmlPath = path.join('public', 'server.html');
+    const dynamicHtmlPath = path.join('views', 'server.html');
 
     // 서버에서 server.html 파일 읽기
     fs.readFile(dynamicHtmlPath, 'utf8', (err, data) => {
@@ -35,7 +35,7 @@ app.get('/:id1', (req, res) => {
     // });
 });
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'views', 'index.html'));
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
 // app.listen(port, () => {
