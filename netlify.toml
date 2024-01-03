@@ -2,3 +2,4 @@
   command = "npm start"
   publish = "views"
   functions = "functions"
+  NETLIFY_EXECUTABLE = "node_modules/.bin/netlify"

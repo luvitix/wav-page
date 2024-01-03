@@ -6,5 +6,8 @@
   },
   "netlify": {
     "functions": "functions"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.11.0"
   }
 }
