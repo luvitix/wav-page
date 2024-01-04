@@ -5,15 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WAV</title>
     <link rel="stylesheet" href="styles.css">
+    <script src="information.js"></script>
 </head>
 <body>
     <div>
         <h1><img src="wav.png" alt=""></h1>
-        <img id="viewpoint" src="fan-objekt/zf_{{objektId}}.png" alt="901Z" width="25%" onclick=flip()>
-        <div>
-            <h3 class="white">Description</h3>
-            <p class="white" ></p>
-        </div>
+        <img id="viewpoint" src="fan-objekt/zf_{{objektId}}.png" alt="901Z" width="30%" onclick=flip()>
+    </div>
+    <div id="description">
+        <div id="descrip" class="rounded-rectangle white">1</div>
+        <div id="number" class="rounded-rectangle white">2</div>
+        <div id="origin" class="rounded-rectangle white">3</div>
+        <div id="makers" class="rounded-rectangle white">4</div>
+        <div id="secret" class="rounded-rectangle white">5</div>
     </div>
 </body>
     <script>
@@ -21,39 +25,5 @@
         window.onload = function () {
             load();
         };
-
-        function load() {
-            // 현재 URL 가져오기
-            var currentUrl = window.location.href;
-
-            // URL에서 끝 부분을 가져오기 (예: https://wav-view.netlify.app/e5ve5vf4uh2sd6wj0qh2sf4uj0qj0q 에서 e5ve5vf4uh2sd6wj0qh2sf4uj0qj0q 가져오기)
-            var id1 = currentUrl.substring(currentUrl.lastIndexOf('/') + 1);
-
-            // 이미지 태그 업데이트
-            var img = document.getElementById('viewpoint');
-            img.src = "fan-objekt/zf_" + id1 + ".png";
-        }
-    </script>
-    <script>
-        function flip() {
-            // 클릭된 이미지의 src 속성을 얻음
-
-            var clickedImage = document.getElementById("viewpoint");
-            var originalImage = clickedImage.src;
-
-            finder = originalImage.split("objekt/")[1]
-
-            if (finder[1] == "f") {
-
-                clickedImage.src = `fan-objekt/zb_${finder.substring(3)}`
-
-            } else if (finder[1] == "b") {
-
-                clickedImage.src = `fan-objekt/zf_${finder.substring(3)}`
-
-            } else {
-                console.log("오류")
-            }
-        }
     </script>
 </html>

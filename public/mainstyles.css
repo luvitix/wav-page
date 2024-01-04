@@ -5,20 +5,28 @@
     font-style: normal;
 }
 
+@media (max-width: 700px) {
+    img {
+        width: 70%; /* 이미지 크기를 60%로 축소 */
+    }
+}
+
 body {
     background-color: black;
     text-align: center;
 }
 
 h1 {
-    font-size: 70px;
+    font-size: clamp(1px, 8vw, 75px);
 }
 
 .update {
-    background-color: #002060;
-    padding: 15px;
-    border-radius: 120px;
     align-items: center;
+    background-color: #002060;
+    padding: 1vw;
+    border-radius: 15vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
 }
 
 .white {
@@ -30,9 +38,10 @@ h1 {
     border: 1px solid #ffffff;
     border-radius: 50px;
     height: 40px;
-    width: 25%;
+    min-width: 320px;
+    width: 40%;
     margin-bottom: 10px;
-    font-size: 20px;
+    font-size: 18px;
 }
 
 .search-button {
