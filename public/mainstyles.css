@@ -18,6 +18,7 @@ body {
 
 h1 {
     font-size: clamp(1px, 8vw, 75px);
+    font-family: 'Pretendard-Regular';
 }
 
 .update {
@@ -31,6 +32,7 @@ h1 {
 
 .white {
     color:aliceblue;
+    
 }
 
 #search-input {

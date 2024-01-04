@@ -50,6 +50,7 @@ function updateContent(objektId) {
             set_Element[2].innerHTML = `<strong>${lines[2].split(" : ")[0]}</strong><br><a href=${lines[2].split(" : ")[1]}><button>원본 보러가기</button></a>`
             set_Element[3].innerHTML = `<strong>${lines[3].split(" : ")[0]}</strong><br><a href=${lines[3].split(" : ")[1]}><button>각설탕 트위터</button></a>`
             set_Element[4].innerHTML = `<strong>${lines[4].split(" : ")[0]}</strong><br>${lines[4].split(" : ")[1]}`
+            document.getElementById("objekt").innerText = `${lines[1].split(" : ")[1]}`;
 
             // 추가로 필요한 업데이트 로직을 여기에 추가할 수 있습니다.
         })
