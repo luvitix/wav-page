@@ -22,11 +22,11 @@ function flip() {
     finder = originalImage.split("page/")
     trigger = finder[0].split("-")
 
-    if (trigger[1] == "front") {
+    if (trigger[2] == "front") {
 
         clickedImage.src = `objekt-zback-page/${finder[1]}`
 
-    } else if (trigger[1] == "zback") {
+    } else if (trigger[2] == "zback") {
 
         clickedImage.src = `objekt-front-page/${finder[1]}`
 
