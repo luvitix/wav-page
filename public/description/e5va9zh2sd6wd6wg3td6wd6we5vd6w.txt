@@ -3,4 +3,4 @@ Number : S05 유연 Fan-Edition 901Z
 origin : https://x.com/mingjyu84/status/1741174021784543695?s=20
 makers : https://x.com/JH_217/status/1741501124107280782?s=20
 makers_name : 각설탕
-Secret_Key : (스페셜 오브젝트의 id 일부)
+Secret_Key : 
