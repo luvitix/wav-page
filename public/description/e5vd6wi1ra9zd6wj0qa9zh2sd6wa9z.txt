@@ -1,5 +1,6 @@
-Desctiption : 2024년을 기념하여 제작된 Fan-Edition Objekt입니다
+Description : 2024년을 기념하여 제작된 Fan-Edition Objekt입니다
 Number : S13 니엔 Fan-Edition 901Z
 origin : https://x.com/nientzupics/status/1738620781339230354?s=20
 makers : https://x.com/JH_217/status/1742164752875593925?s=20
+makers2 : 각설탕
 Secret_Key : xe2i

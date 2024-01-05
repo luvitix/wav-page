@@ -1,5 +1,6 @@
-Desctiption : 2024년을 기념하여 제작된 Fan-Edition Objekt입니다
+Description : 2024년을 기념하여 제작된 Fan-Edition Objekt입니다
 Number : S05 유연 Fan-Edition 901Z
 origin : https://x.com/mingjyu84/status/1741174021784543695?s=20
 makers : https://x.com/JH_217/status/1741501124107280782?s=20
+makers2 : 각설탕
 Secret_Key : 

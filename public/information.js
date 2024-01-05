@@ -8,7 +8,7 @@ function load() {
 
     // 이미지 태그 업데이트
     var img = document.getElementById('viewpoint');
-    img.src = "fan-objekt/zf_" + id1 + ".png";
+    img.src = "objekt-front-page/" + id1 + ".png";
 
     updateContent(id1)
 }
@@ -19,18 +19,19 @@ function flip() {
     var clickedImage = document.getElementById("viewpoint");
     var originalImage = clickedImage.src;
 
-    finder = originalImage.split("objekt/")[1]
+    finder = originalImage.split("page/")
+    trigger = finder[0].split("-")
 
-    if (finder[1] == "f") {
+    if (trigger[1] == "front") {
 
-        clickedImage.src = `fan-objekt/zb_${finder.substring(3)}`
+        clickedImage.src = `objekt-zback-page/${finder[1]}`
 
-    } else if (finder[1] == "b") {
+    } else if (trigger[1] == "zback") {
 
-        clickedImage.src = `fan-objekt/zf_${finder.substring(3)}`
+        clickedImage.src = `objekt-front-page/${finder[1]}`
 
     } else {
-        console.log("오류")
+        console.log("오류", trigger)
     }
 }
 
@@ -48,8 +49,8 @@ function updateContent(objektId) {
             set_Element[0].innerHTML = `<strong>${lines[0].split(" : ")[0]}</strong><br>${lines[0].split(" : ")[1]}`
             set_Element[1].innerHTML = `<strong>${lines[1].split(" : ")[0]}</strong><br>${lines[1].split(" : ")[1]}`
             set_Element[2].innerHTML = `<strong>${lines[2].split(" : ")[0]}</strong><br><a href=${lines[2].split(" : ")[1]}><button>원본 보러가기</button></a>`
-            set_Element[3].innerHTML = `<strong>${lines[3].split(" : ")[0]}</strong><br><a href=${lines[3].split(" : ")[1]}><button>각설탕 트위터</button></a>`
-            set_Element[4].innerHTML = `<strong>${lines[4].split(" : ")[0]}</strong><br>${lines[4].split(" : ")[1]}`
+            set_Element[3].innerHTML = `<strong>${lines[3].split(" : ")[0]}</strong><br><a href=${lines[3].split(" : ")[1]}><button>${lines[4].split(" : ")[1]} 트위터</button></a>`
+            set_Element[4].innerHTML = `<strong>${lines[5].split(" : ")[0]}</strong><br>${lines[5].split(" : ")[1]}`
             document.getElementById("objekt").innerText = `${lines[1].split(" : ")[1]}`;
 
             // 추가로 필요한 업데이트 로직을 여기에 추가할 수 있습니다.

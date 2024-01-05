@@ -1,5 +1,6 @@
-Desctiption : tripleS NXT 활동 기념으로 제작된 Fan-Edition Objekt입니다
+Description : tripleS NXT 활동 기념으로 제작된 Fan-Edition Objekt입니다
 Number : S17 린 Fan-Edition 904Z
 origin : https://x.com/triplescosmos/status/1737805120786866215?s=20
 makers : https://wav-view.netlify.app/F-Ev3Hg-VOQ132319doitallS17904
+makers2 : 각설탕
 Secret_Key : 
