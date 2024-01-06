@@ -3,4 +3,4 @@ Number : S07 나경 Fan-Edition 901Z
 origin : https://x.com/Triples_1st_Cam/status/1741305279223112174?s=20
 makers : https://x.com/JH_217/status/1742133112342204898?s=20
 makers2 : 각설탕
-Secret_Key : 
+Secret_Key : ed7y
