@@ -5,12 +5,6 @@
     font-style: normal;
 }
 
-@media (max-width: 700px) {
-    img {
-        width: 70%; /* 이미지 크기를 60%로 축소 */
-    }
-}
-
 body {
     background-color: black;
     text-align: center;
@@ -19,6 +13,7 @@ body {
 h1 {
     font-size: clamp(1px, 8vw, 75px);
     font-family: 'Pretendard-Regular';
+    text-align: center;
 }
 
 .update {
@@ -31,7 +26,7 @@ h1 {
 
 .white {
     color:aliceblue;
-    
+    font-family: 'Pretendard-Regular'
 }
 
 #search-input {
@@ -53,4 +48,48 @@ h1 {
     height: 60px;
     width: 60px;
     font-size: 20px;
+}
+
+
+/* 오브젝트 미리보기 메인페이지 */
+#recently {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 10px;
+    text-align: center;
+}
+
+
+#recently img {
+    width: 100%;
+    height: auto;
+}
+
+/* 모든 <a> 태그에 대해 스타일 지정 */
+a {
+    text-decoration: none; /* 밑줄 제거 */
+    color: black; /* 링크 색상 변경 */
+    display: inline-block; /* 가운데 정렬을 위해 인라인 블록 요소로 변경 */
+    line-height: 2em; /* 행의 높이를 조절하여 세로 가운데 정렬 */
+    text-align: center; /* 텍스트 가운데 정렬 */
+    width: 100%; /* 부모 요소의 너비를 100%로 설정하여 가운데 정렬을 유지 */
+}
+
+
+@media (max-width: 700px) {
+    #recently {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+    #recently {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (min-width: 1001px) and (max-width: 1300px) {
+    #recently {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
