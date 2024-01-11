@@ -29,6 +29,12 @@ h1 {
     font-family: 'Pretendard-Regular'
 }
 
+.center_display {
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+}
+
 #search-input {
     padding: 10px;
     border: 1px solid #ffffff;

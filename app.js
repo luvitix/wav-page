@@ -8,7 +8,14 @@ app.use(express.static(path.join('public')));
 
 app.get('/:id1', (req, res) => {
     const id1 = req.params.id1;
-    const dynamicHtmlPath = path.join('public', 'server.html');
+    let dynamicHtmlPath = ""
+
+    // 어떤 페이지로 갈 지 결정
+    if (id1 == "objekt-view") {
+        dynamicHtmlPath = path.join('public', 'objekt-view.html');
+    } else {
+        dynamicHtmlPath = path.join('public', 'server.html');
+    }
 
     try {
         // 파일을 동기적으로 읽어옴
