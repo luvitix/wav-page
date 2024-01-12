@@ -82,19 +82,19 @@ a {
 }
 
 
-@media (max-width: 700px) {
-    #recently {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (min-width: 701px) and (max-width: 1000px) {
+@media (max-width: 900px) {
     #recently {
         grid-template-columns: repeat(3, 1fr);
     }
 }
 
-@media (min-width: 1001px) and (max-width: 1300px) {
+/* @media (min-width: 701px) and (max-width: 1000px) {
+    #recently {
+        grid-template-columns: repeat(3, 1fr);
+    }
+} */
+
+@media (min-width: 901px) and (max-width: 1300px) {
     #recently {
         grid-template-columns: repeat(4, 1fr);
     }

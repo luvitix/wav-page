@@ -10,7 +10,7 @@
 <body>
 
     <div id="main" class="search-container" style="height: 100vh;">
-        <img src="wav.png" alt="" width="320px" style="margin-top: 15vw;">
+        <img src="wav.png" alt="" width="320px" style="margin-top: 15vw">
         <form id="searchForm" onsubmit="return searchObject();">
             <h3 class="white">보고 싶은 오브젝트의 id를 입력하세요</h3>
             <input type="text" id="search-input" placeholder="id 입력">
@@ -18,17 +18,21 @@
         </form>
 
         <a href="#teaser" class="white center_display" style="font-size: 30px;">
-            <img src="main-page-source/button2.png" width="40px"> teaser 보러가기</a>
+            <img src="main-page-source/button2.png" width="40px"> teaser 보러 가기</a>
             <br>
         <a href="#recently-title" class="white center_display" style="font-size: 30px; margin-top: -20px;">
-            <img src="main-page-source/button1.png" width="40px"> objekt 보러가기</a><br>
+            <img src="main-page-source/button1.png" width="40px"> objekt 보러 가기</a>
+            <br>
+        <a href="/objekt-view" class="white center_display" style="font-size: 30px; margin-top: -20px;">
+            <img src="main-page-source/button3.png" width="40px"> 모든 가상 objekt</a>
+            <br>
         <p class="white">버전 : 1.2.0</p>
     </div>
 
     
     
 
-    <div id="teaser">
+    <div id="teaser" class="margin-control" style="margin-top: 15vw">
         <a href="#main"><h1 class="white">최근 공개된 가상 티저</h1></a>
         <div class="update" style="background-color: rgb(19, 19, 19); text-align: center;">
             <h1 class="white">teaser drop</h1>
@@ -52,7 +56,7 @@
         </div>
     </div>
 
-    <div id="recently-title">
+    <div id="recently-title" class="margin-control" style="margin-top: 15vw">
         <a href="#main"><h1 class="white">최근 공개된 가상 오브젝트</h1></a>
         <div id="recently">
             <div id="S01"> <img src="SSSsoon.png" alt="최근 옵젝이 없어요"> </div>
@@ -90,11 +94,21 @@
             <div id="S15"><a href="https://wav-view.netlify.app/e5ve5vf4uh2sd6wj0qh2sf4uj0qj0q">
                 <img src="objekt-front-page/e5ve5vf4uh2sd6wj0qh2sf4uj0qj0q.png" alt="S15"></a></div>
 
-            <div id="S16"><img src="SSSsoon.png" alt="최근 옵젝이 없어요"></div>
-            <div id="S17"><img src="SSSsoon.png" alt="최근 옵젝이 없어요"></div>
-            <div id="S18"><img src="SSSsoon.png" alt="최근 옵젝이 없어요"></div>
-            <div id="S19"><img src="SSSsoon.png" alt="최근 옵젝이 없어요"></div>
-            <div id="S20"><img src="SSSsoon.png" alt="최근 옵젝이 없어요"></div>
+            <div id="S16">
+                <img src="SSSsoon.png" alt="최근 옵젝이 없어요"></div>
+
+            <div id="S17"><a href="#teaser">
+                <img src="main-page-source/nxtsoonS17.png" alt="NXT"></a></div>
+
+            <div id="S18"><a href="#teaser">
+                <img src="main-page-source/nxtsoonS18.png" alt="NXT"></a></div>
+
+            <div id="S19"><a href="#teaser">
+                <img src="main-page-source/nxtsoonS19.png" alt="NXT"></a></div>
+
+            <div id="S20"><a href="#teaser">
+                <img src="main-page-source/nxtsoonS20.png" alt="NXT"></a></div>
+
             <div id="S21"></div>
             <div id="S22"></div>
             <div id="S23"></div>
