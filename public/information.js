@@ -1,4 +1,6 @@
 
+
+
 function load() {
     // 현재 URL 가져오기
     var currentUrl = window.location.href;
@@ -8,7 +10,7 @@ function load() {
 
     // 이미지 태그 업데이트
     var img = document.getElementById('viewpoint');
-    img.src = "objekt-front-page/" + id1 + ".png";
+    img.src = `objekt-front-page/${id1}.png`;
 
     updateContent(id1)
 }
@@ -20,13 +22,13 @@ function flip() {
     var originalImage = clickedImage.src;
 
     finder = originalImage.split("page/")
-    trigger = finder[0].split("-")
+    trigger = finder[0].split("kt-")
 
-    if (trigger[2] == "front") {
+    if (trigger[1] == "front-") {
 
         clickedImage.src = `objekt-zback-page/${finder[1]}`
 
-    } else if (trigger[2] == "zback") {
+    } else if (trigger[1] == "zback-") {
 
         clickedImage.src = `objekt-front-page/${finder[1]}`
 
@@ -56,4 +58,35 @@ function updateContent(objektId) {
             // 추가로 필요한 업데이트 로직을 여기에 추가할 수 있습니다.
         })
         .catch(error => console.error('파일을 가져오는 중 오류 발생:', error));
+}
+
+function downloadImage() {
+
+    var clickedImage = document.getElementById("viewpoint");
+    var originalImage = clickedImage.src;
+
+    finder = originalImage.split("page/")
+    trigger = finder[0].split("kt-")
+
+    function filePath () {
+        if (trigger[1] == "front-") {
+
+            return `objekt-front-page/${finder[1]}`
+
+        } else if (trigger[1] == "zback-") {
+
+            return `objekt-zback-page/${finder[1]}`
+
+        } else {
+            console.log("오류", trigger)
+        }
+    }
+
+    // a 태그를 생성하고 속성 설정
+    const a = document.createElement("a");
+    a.href = filePath();
+    a.download = "tripleS.png";
+
+    // a 태그를 클릭하여 파일 다운로드 시작
+    a.click();
 }
