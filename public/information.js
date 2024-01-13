@@ -46,14 +46,20 @@ function updateContent(objektId) {
             
             var set_Element = ['descrip', 'number', 'origin', 'makers', 'secret']
             for (i = 0; i < set_Element.length; i++) { set_Element[i] = document.getElementById(set_Element[i]) }
-            // HTML 엘리먼트에 값을 설정
+            
+            if (lines[0].split(" : ")[1] == undefined){
+                
+                window.location.href = "error.html";
 
+            } else {
+            // HTML 엘리먼트에 값을 설정
             set_Element[0].innerHTML = `<strong>${lines[0].split(" : ")[0]}</strong><br>${lines[0].split(" : ")[1]}`
             set_Element[1].innerHTML = `<strong>${lines[1].split(" : ")[0]}</strong><br>${lines[1].split(" : ")[1]}`
             set_Element[2].innerHTML = `<strong>${lines[2].split(" : ")[0]}</strong><br><a href=${lines[2].split(" : ")[1]}><button>원본 보러가기</button></a>`
             set_Element[3].innerHTML = `<strong>${lines[3].split(" : ")[0]}</strong><br><a href=${lines[3].split(" : ")[1]}><button>${lines[4].split(" : ")[1]} 트위터</button></a>`
             set_Element[4].innerHTML = `<strong>${lines[5].split(" : ")[0]}</strong><br>${lines[5].split(" : ")[1]}`
             document.getElementById("objekt").innerText = `${lines[1].split(" : ")[1]}`;
+            }
 
             // 추가로 필요한 업데이트 로직을 여기에 추가할 수 있습니다.
         })
