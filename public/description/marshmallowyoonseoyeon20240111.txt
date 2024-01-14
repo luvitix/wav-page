@@ -3,4 +3,4 @@ Number : S01 서연 Marshmallow 902Z
 origin : https://x.com/tripleSGLOBAL/status/1745106829091188812?s=20
 makers : https://x.com/JH_217/
 makers_name : 각설탕
-Secret_Key : marshmellowyoonseoyeonS01fromm
+Secret_Key : marshmallowyoonseoyeonS01fromm
