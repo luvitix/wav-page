@@ -76,11 +76,28 @@ a {
     text-decoration: none; /* 밑줄 제거 */
     color: black; /* 링크 색상 변경 */
     display: inline-block; /* 가운데 정렬을 위해 인라인 블록 요소로 변경 */
-    line-height: 2em; /* 행의 높이를 조절하여 세로 가운데 정렬 */
     text-align: center; /* 텍스트 가운데 정렬 */
     width: 100%; /* 부모 요소의 너비를 100%로 설정하여 가운데 정렬을 유지 */
 }
 
+.green {
+    color: rgb(0, 98, 255);
+    font-family: 'Pretendard-Regular'
+}
+
+.list_objekt {
+    text-align: left; /* 왼쪽 정렬 */
+    font-size: clamp(1px, 4vw, 23px);
+}
+
+.list_container {
+    width: 30%;
+    border: 0.3vw solid aliceblue;
+    border-radius: 2vw;
+    justify-content: left; /* 추가된 부분 */
+    margin: 0 auto; /* 가운데 정렬 */
+    text-align: left; /* 왼쪽 정렬 */
+  }
 
 @media (max-width: 900px) {
     .objekt_grid {
@@ -89,6 +106,14 @@ a {
     
     .mb-pc {
         width: 70%;
+    }
+
+    .list_container {
+        width: 90%;
+        height: clamp(15vw, auto, auto);
+        border: 0.5vw solid aliceblue;
+        border-radius: 3vw;
+        margin: 0.5vw;
     }
 }
 
