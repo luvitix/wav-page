@@ -1,0 +1,6 @@
+Description : 배지전쟁 촬영 중 찍힌 사진으로 2024년 01월 11일 프롬에 업데이트된 사진입니다
+Number : S01 서연 Marshmallow 902Z
+origin : https://x.com/tripleSGLOBAL/status/1745106829091188812?s=20
+makers : https://x.com/JH_217/
+makers_name : 각설탕
+Secret_Key : marshmellowyoonseoyeonS01fromm
