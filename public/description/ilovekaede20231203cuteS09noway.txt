@@ -1,0 +1,6 @@
+Description : 2023년 12월 03일 러블루션 팬사인회 사진입니다 (촬영자 - @kaede_noway)
+Number : S09 카에데 lovelution 909Z
+origin : https://x.com/kaede_noway/status/1734890982091767985?s=20
+makers : https://x.com/JH_217/
+makers_name : 각설탕
+Secret_Key : <div class="rounded-rectangle white" style="width: 95%;"><strong>1st Key</strong><p>bunnykaede231203lovelutionsign</p></div><div class="rounded-rectangle white" style="width: 95%;"><strong>2nd Key</strong><p>inyu1520</p></div>
