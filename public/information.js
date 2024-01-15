@@ -13,6 +13,7 @@ function load() {
     img.src = `objekt-front-page/${id1}.png`;
 
     updateContent(id1)
+    
 }
 
 function flip() {
@@ -48,8 +49,11 @@ function updateContent(objektId) {
             for (i = 0; i < set_Element.length; i++) { set_Element[i] = document.getElementById(set_Element[i]) }
             
             if (lines[0].split(" : ")[1] == undefined){
-                
-                window.location.href = "error.html";
+                try {
+                    test(id1)
+                } catch {
+                    window.location.href = "error.html";
+                }
 
             } else {
             // HTML 엘리먼트에 값을 설정
@@ -96,3 +100,13 @@ function downloadImage() {
     // a 태그를 클릭하여 파일 다운로드 시작
     a.click();
 }
+
+async function test(id1) {
+    try {
+      var now_content = await DB.collection('objekt').doc(id1).get();
+      console.log(now_content.data());
+      return now_content.data()
+    } catch (error) {
+      console.error("예외가 발생했습니다:", error);
+    }
+  }

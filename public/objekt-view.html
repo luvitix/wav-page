@@ -6,7 +6,9 @@
     <title id="objekt">가상 오브젝트</title>
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="mainstyles.css">
+    <link rel="stylesheet" href="addon.css">
     <script src="information.js"></script>
+    <script src="addon.js"></script>
 </head>
 <body>
     <div>
@@ -21,29 +23,35 @@
             미완료 사항<br>
             1. 오브젝트 목록
         </p>
-        <!-- <div class="list_container">
+        <div class="list_container">
             <ul style="list-style-type: none;">
-                <li class="white" style="font-size: 35px;">1. 팬 에디션 오브젝트<ul style="list-style-type: none;">
+                <li class="white" style="font-size: 35px; text-align: left;">1. 팬 에디션 오브젝트<ul style="list-style-type: none;">
                     <li class="green">
-                        <a href="#2024WAV" class="green on_your_left">1. 901Z : 2024년 신년 맞이 오브젝트 (S01 ~ S16)</a>
+                        <a href="#2024WAV" class="green" style="font-size: 3vh; text-align: left;">1. 901Z : 2024년 신년 맞이 오브젝트 (S01 ~ S16)</a>
                     </li>
                 </li></ul><br>
 
                 <li class="white" style="font-size: 35px;">2. 스페셜 가상 오브젝트<ul style="list-style-type: none;">
-                    <li class="green">1. 902Z / 903Z</li>
+                    <li class="green">
+                        <a href="#Special" class="green" style="font-size: 3vh; text-align: left;">1. 902Z / 903Z (S01, S09, S15)</a>
+                    </li>
                 </li></ul><br>
 
                 <li class="white" style="font-size: 35px;">3. 더블 가상 오브젝트<ul style="list-style-type: none;">
-                    <li class="green">1. 908Z / 909Z / 910Z (업데이트 예정)</li>
+                    <li class="green">
+                        <a href="#Double" class="green" style="font-size: 3vh; text-align: left;">1. 908Z / 909Z / 910Z (S09, S15)</a>
+                    </li>
                 </li></ul><br>
 
                 <li class="white" style="font-size: 35px;">4. 유닛 오브젝트<ul style="list-style-type: none;">
-                    <li class="green">1. 904Z / 905Z (NXT 업데이트 예정)</li>
+                    <li class="green">
+                        <a href="#2024_904905" class="green" style="font-size: 3vh; text-align: left;">1. 904Z / 905Z (NXT 업데이트 예정)</a>
+                    </li>
                 </li></ul>
             </ul>
         
         </div>
-    </div>-->
+    </div>
 
     <div id="Double" class="margin-control" style="margin-top: 15vw">
         <a href="#main"><h1 class="white">더블 가상 오브젝트</h1></a>
@@ -80,10 +88,33 @@
     <div id="Special" class="margin-control" style="margin-top: 15vw">
         <a href="#main"><h1 class="white">스페셜 가상 오브젝트</h1></a>
         <div class="objekt_grid">
+
             <div id="S01"><a href="https://wav-view.netlify.app/marshmallowyoonseoyeon20240111">
                 <img src="objekt-front-page/marshmallowyoonseoyeon20240111.png" alt="윤서연_마쉬멜로우1"></a></div>
-            <div id="S02"><img src="main-page-source/mmysy903.png" alt="윤서연_마쉬멜로우2"></div>
-            <div id="S02"><img src="main-page-source/S09S152024902.png" alt="S09S152024902"></div>
+
+            <div id="S02"><img src="main-page-source/mmysy903.png" alt="윤서연_마쉬멜로우2" onclick="openPopup('helpPopup10')"></div>
+            <div id="helpPopup10" class="helpPopup white">
+                <span class="closeButton" onclick="closePopup('helpPopup10')">&times;</span>
+                <h3>Objekt를 보려면 아래 Objekt들의 Grid_key가 필요해요</h3>
+                <img src="objekt-front-page/marshmallowyoonseoyeon20240111.png">
+            </div>
+            
+            <div id="S02"><img src="main-page-source/S09S152024902.png" alt="S09S152024902" onclick="openPopup('helpPopup11')"></div>
+            <div id="helpPopup11" class="helpPopup white">
+                <span class="closeButton" onclick="closePopup('helpPopup11')">&times;</span>
+                <h3>Objekt를 보려면 아래 Objekt들의 Grid_key가 필요해요</h3>
+                <div class="sub_4grid">
+                    <text>1</text>
+                    <text>2</text>
+                    <img src="objekt-front-page/bunnykaede231203lovelutionsign.png">
+                    <img src="objekt-front-page/burger1116lovelutionsignS15908.png">
+                    <img src="objekt-front-page/ilovekaede20231203cuteS09noway.png">
+                    <img src="objekt-front-page/welovexinyu20231116cuteS15Dove.png">
+                    <text>3</text>
+                    <text>4</text>
+                </div>
+            </div>
+
             <div id="S03"><img src="SSSsoon.png" alt="최근 옵젝이 없어요"></div>
         </div>
     </div>

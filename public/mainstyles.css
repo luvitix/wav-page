@@ -81,7 +81,7 @@ a {
 }
 
 .green {
-    color: rgb(0, 98, 255);
+    color: rgb(190, 130, 255);
     font-family: 'Pretendard-Regular'
 }
 
@@ -91,10 +91,10 @@ a {
 }
 
 .list_container {
-    width: 30%;
+    width: 40%;
     border: 0.3vw solid aliceblue;
     border-radius: 2vw;
-    justify-content: left; /* 추가된 부분 */
+    justify-content: center; /* 추가된 부분 */
     margin: 0 auto; /* 가운데 정렬 */
     text-align: left; /* 왼쪽 정렬 */
   }
