@@ -1,6 +1,0 @@
-Description : 2024년을 기념하여 제작된 Fan-Edition Objekt입니다
-Number : S15 신위 FE2024 901Z
-origin : https://x.com/kaede_noway/status/1732316736169648139?s=20
-makers : https://x.com/JH_217/status/1741495471976382875?s=20
-makers2 : 각설탕
-Secret_Key : u0e
