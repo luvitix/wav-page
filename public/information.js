@@ -57,11 +57,16 @@ async function updateContent(objektId) {
             console.log(now_content.data());
 
             if (now_content.exists) {
+                objekt_numbering = `${now_content.data()['S_Number']} ${now_content.data()['S_Name']} ${now_content.data()['Season']} ${now_content.data()['O_Number']}`
+
                 set_Element[0].innerHTML = `<strong>Description</strong><br>${now_content.data()['Description']}`
-                set_Element[1].innerHTML = `<strong>Number</strong><br>${now_content.data()['S_Number']} ${now_content.data()['S_Name']} ${now_content.data()['Season']} ${now_content.data()['O_Number']}`
+                set_Element[1].innerHTML = `<strong>Number</strong><br>${objekt_numbering}`
                 set_Element[2].innerHTML = `<strong>origin</strong><br><a href=${now_content.data()['origin']}><button>원본 보러가기</button></a>`
                 set_Element[3].innerHTML = `<strong>makers</strong><br><a href=${now_content.data()['maker']}><button>${now_content.data()['maker_name']} 트위터</button></a>`
                 set_Element[4].innerHTML = `<strong>Grid_Key</strong><br>${now_content.data()['imsi_key']}`
+
+                document.getElementById("objekt").innerText = objekt_numbering
+
             } else {
                 window.location.href = "error.html";
             }
