@@ -61,6 +61,7 @@ button {
     font-size: clamp(16px, 2vw, 30px)
 }
 
+
 @media screen and (max-width: 1000px) {
     img {
         width: 70%;

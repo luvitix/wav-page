@@ -10,10 +10,10 @@
 <body>
     <div id="page-open" style="height: 100vh;">
         <h1 class="white" style="margin-top: 7vw;">최근 업데이트된 오브젝트 3</h1>
-        <div id="image-container" style="display: inline-block;">
-            <img id="image1" src="objekt-front-page/Rudolph20231216evolutionS05908.png" alt="" width="320px" style="margin-left: auto; margin-right: auto;">
-            <img id="image2" src="objekt-front-page/e5va9zd6we5vd6wf4uj0qi1rg3te5v.png" alt="" width="320px" style="margin-left: auto; margin-right: auto; display: none;">
-            <img id="image3" src="objekt-front-page/socuteNaky20231228evolution908.png" alt="" width="320px" style="margin-left: auto; margin-right: auto; display: none;">
+        <div id="image-container" style="display: flex; justify-content: center;">
+            <img id="image1" src="objekt-front-page/Rudolph20231216evolutionS05908.png" alt="" width="320px" style="transform: translateX(+320px); transition: all 1s">
+            <img id="image2" src="objekt-front-page/e5va9zd6we5vd6wf4uj0qi1rg3te5v.png" alt="" width="320px" style="transform: translateX(+320px); opacity: 0; transition: all 1s">
+            <img id="image3" src="objekt-front-page/socuteNaky20231228evolution908.png" alt="" width="320px" style="opacity: 0; transition: all 1s">
         </div>
         <a id="objektLink" href="/Rudolph20231216evolutionS05908" class="white center_display" style="font-size: 30px; margin-top: 10px;">
             <img src="main-page-source/button1.png" width="40px"> objekt 바로 보러 가기</a>
@@ -158,13 +158,36 @@
 
         setInterval(function() {
             // Hide all images
-            document.getElementById('image1').style.display = 'none';
-            document.getElementById('image2').style.display = 'none';
-            document.getElementById('image3').style.display = 'none';
 
             // Show the next image
             currentImage = (currentImage % 3) + 1;
-            document.getElementById('image' + currentImage).style.display = 'block';
+            
+            document.getElementById('image' + currentImage).style.opacity = 1
+            document.getElementById('image' + currentImage).style.transform = 'translateX(0px)';
+            console.log(currentImage)
+
+            if (currentImage == 1) {
+                document.getElementById('image3').style.opacity = 0
+                document.getElementById('image3').style.transform = 'translateX(-640px)';
+                document.getElementById('image2').style.opacity = 0
+                document.getElementById('image2').style.transform = 'translateX(+320px)';
+                document.getElementById('image1').style.opacity = 1
+                document.getElementById('image1').style.transform = 'translateX(+320px)';
+            } else if (currentImage == 2) {
+                document.getElementById('image3').style.opacity = 0
+                document.getElementById('image3').style.transform = 'translateX(0px)';
+                document.getElementById('image2').style.opacity = 1
+                document.getElementById('image2').style.transform = 'translateX(0px)';
+                document.getElementById('image1').style.opacity = 0
+                document.getElementById('image1').style.transform = 'translateX(0px)';
+            } else {
+                document.getElementById('image3').style.opacity = 1
+                document.getElementById('image3').style.transform = 'translateX(-320px)';
+                document.getElementById('image2').style.opacity = 0
+                document.getElementById('image2').style.transform = 'translateX(-320px)';
+                document.getElementById('image1').style.opacity = 0
+                document.getElementById('image1').style.transform = 'translateX(+640px)';
+            }
 
             document.getElementById('objektLink').setAttribute('href', imageLinks[currentImage - 1]);
         }, 3000);
