@@ -55,18 +55,22 @@ async function updateContent(objektId) {
         
         console.log(id1)
 
-        set_Element[0].innerHTML = `<strong>${lines[0].split(" : ")[0]}</strong><br>${lines[0].split(" : ")[1]}`
-        set_Element[1].innerHTML = `<strong>${lines[1].split(" : ")[0]}</strong><br>${lines[1].split(" : ")[1]}`
-        set_Element[2].innerHTML = `<strong>${lines[2].split(" : ")[0]}</strong><br><a href=${lines[2].split(" : ")[1]}><button>원본 보러가기</button></a>`
-        set_Element[3].innerHTML = `<strong>${lines[3].split(" : ")[0]}</strong><br><a href=${lines[3].split(" : ")[1]}><button>${lines[4].split(" : ")[1]} 트위터</button></a>`
-        set_Element[4].innerHTML = `<strong>${lines[5].split(" : ")[0]}</strong><br>${lines[5].split(" : ")[1]}`
-        document.getElementById("objekt").innerText = `${lines[1].split(" : ")[1]}`;
+        if (lines[0].split(" : ")[1] == undefined) {
+            throw new Error("없음")
+        } else {
+            set_Element[0].innerHTML = `<strong>${lines[0].split(" : ")[0]}</strong><br>${lines[0].split(" : ")[1]}`
+            set_Element[1].innerHTML = `<strong>${lines[1].split(" : ")[0]}</strong><br>${lines[1].split(" : ")[1]}`
+            set_Element[2].innerHTML = `<strong>${lines[2].split(" : ")[0]}</strong><br><a href=${lines[2].split(" : ")[1]}><button>원본 보러가기</button></a>`
+            set_Element[3].innerHTML = `<strong>${lines[3].split(" : ")[0]}</strong><br><a href=${lines[3].split(" : ")[1]}><button>${lines[4].split(" : ")[1]} 트위터</button></a>`
+            set_Element[4].innerHTML = `<strong>${lines[5].split(" : ")[0]}</strong><br>${lines[5].split(" : ")[1]}`
+            document.getElementById("objekt").innerText = `${lines[1].split(" : ")[1]}`;
+        }
 
     } catch {
         
         const base_data = await test(id1);
         const now_content = base_data[0]
-        const maker_data = base_data[1];
+        const maker_data = base_data[1]
 
         if (now_content.exists) {
             objekt_numbering = `${now_content.data()['S_Number']} ${now_content.data()['S_Name']} ${now_content.data()['Season']} ${now_content.data()['O_Number']}`
